@@ -1,0 +1,46 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 CREATE TABLE CUSTOMER(\
+  ID INT AUTO_INCREMENT,\
+  NAME VARCHAR(255),\
+  DATE_OF_BIRTH DATE, \
+  FAVOURITE_MEAL VARCHAR(255),\
+  PRIMARY KEY (ID)\
+  );\
+  \
+INSERT INTO CUSTOMER(NAME, DATE_OF_BIRTH, FAVOURITE_MEAL)\
+VALUES('Luigi', '1990-11-11', 'Spaghetti');\
+INSERT INTO CUSTOMER(NAME, DATE_OF_BIRTH, FAVOURITE_MEAL)\
+VALUES('Piero', '1992-10-12', 'Pizza');\
+INSERT INTO CUSTOMER(NAME, DATE_OF_BIRTH, FAVOURITE_MEAL)\
+VALUES('Giulia', '1995-01-10', 'Kebab');\
+\
+\
+UPDATE CUSTOMER\
+SET FAVOURITE_MEAL = 'Tortellini'\
+WHERE ID = 1;\
+\
+UPDATE CUSTOMER\
+SET NAME = 'Pierfranco'\
+WHERE ID = 2;\
+\
+UPDATE CUSTOMER\
+SET DATE_OF_BIRTH = '1994-01-10'\
+WHERE ID = 3;\
+\
+DELETE FROM CUSTOMER\
+WHERE ID = 2;\
+\
+TRUNCATE CUSTOMER;\
+\
+\
+\
+6) In questa tabella la primary key \'e8 gi\'e0 indicata nel CUSTOMER_ID;\
+7) In questa tabella io utilizzerei il PRODUCT_NAME come primary key, perch\'e9 product_price e product_quantity possono essere condivisi da pi\'f9 righe, lo stesso vale per la product_description che per certi oggetti pu\'f2 essere uguale, e magari \'e8 anche un campo lungo, non lo utilizzerei come primary key;\
+8) In questa tabella io utilizzerei come primary key l\'92ORDER_ID in quanto \'e8 AUTO_INCREMENT e quindi per forza sar\'e0 diverso per ogni riga;\
+9) In questa tabella, per lo stesso motivo scritto sopra, utilizzerei l\'92ORDER_ID come primary key.}
